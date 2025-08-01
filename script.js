@@ -31,15 +31,15 @@ function moveButton() {
 }
 
 yesBtn.addEventListener("click", () => {
-  // Secretly log the click
-  fetch("https://docs.google.com/forms/d/e/1FAIpQLSdonUgTjQnpxwsa5ytmgzw5zeXKZUSyMg9_XvLEx52EdnERTQ/formResponse", {
+  // Send hidden form response
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSdonUgTjQnpxwsa5ytmgzw5zeXKZUSyMg9_XvLEx52EdnERTQ/formResponse?entry.284502747=Yes+clicked", {
     method: "POST",
-    mode: "no-cors",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded"
-    },
-    body: "entry.284502747=Yes clicked"
+    mode: "no-cors"
   });
+
+  // Go to the cute page
+  window.location.href = "yay.html";
+});
 
   // Proceed to the cute page
   window.location.href = "yay.html";
